@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css?family=Quicksand:400");
+$grayish: #ecf0f1;
+$background: #34495e;
+body {
+	font-family: "Quicksand", sans-serif;
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	box-sizing: border-box;
+}
+
+header {
+	background-color: $background;
+	width: 100%;
+	&:before, &:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+	.project {
+		padding-left: 5px;
+		display: inline-block;
+		color: white;
+		float: left;
+	}
+	nav {
+		text-align: center;
+		display: inline-block;
+		max-height: 50px;
+		float: right;
+		ul {
+			padding: 0;
+			margin: 0;
+			list-style-type: none;
+			float: right;
+			li {
+				display: inline-block;
+				text-align: center;
+				min-width: 120px;
+				margin-right: 0;
+				a {
+					line-height: 54px;
+					display: inline-block;
+					margin-top: 0;
+					margin-bottom: 0;
+					color: white;
+					text-decoration: none;
+					transition: background-color ease-in 0.3s;
+					min-width: 120px;
+					&:hover {
+						background-color: $grayish;
+						color: $background;
+					}
+				}
+				ul {
+					display: none;
+				}
+				&:hover ul {
+					display: block;
+					position: absolute;
+					background-color: $background;
+					li {
+						display: block;
+					}
+				}
+			}
+		}
+	}
+}
+main {
+	background-color: $grayish;
+	height: calc(100vh - 52px);
+	padding-left: 5px;
+	width: 80%;
+	margin: 0 auto;
+	&:before, &:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
